@@ -5,12 +5,12 @@ description: |
   primarily aimed at Linux distributions and other UNIX-like operating
   systems.
 grade: stable
-base: core24
+base: core26
 confinement: classic
 adopt-info: sos
 license: GPL-2.0-only
 environment:
-  PYTHONPATH: ${SNAP}/lib/python3.12/site-packages:${SNAP}/usr/lib/python3/dist-packages:${PYTHONPATH}
+  PYTHONPATH: ${SNAP}/lib/python3.14/site-packages:${SNAP}/usr/lib/python3/dist-packages:${SNAP}/usr/lib/python3.14/lib-dynload:${SNAP}/usr/lib/python3.14:${PYTHONPATH}
 
 parts:
   sos:
@@ -27,9 +27,9 @@ parts:
       - gettext
       - python3-venv
     stage-packages:
-      - python3.12-minimal
-      - libpython3.12-minimal
-      - libpython3.12-stdlib
+      - python3.14-minimal
+      - libpython3.14-minimal
+      - libpython3.14-stdlib
     python-packages:
       - pip
       - setuptools
